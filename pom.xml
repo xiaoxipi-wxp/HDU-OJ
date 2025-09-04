@@ -29,6 +29,11 @@
         <spring-boot.version>3.0.1</spring-boot.version>
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <lombok.version>1.18.32</lombok.version>
+        <oj-commom-core.version>1.0-SNAPSHOT</oj-commom-core.version>
+        <oj-common-swagger.version>1.0-SNAPSHOT</oj-common-swagger.version>
+        <oj-common-security.version>1.0-SNAPSHOT</oj-common-security.version>
     </properties>
 
     <dependencies>
@@ -37,6 +42,13 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -64,6 +76,11 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

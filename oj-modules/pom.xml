@@ -29,6 +29,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>edu.hdu</groupId>
+            <artifactId>oj-common-core</artifactId>
+            <version>${oj-commom-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.hdu</groupId>
+            <artifactId>oj-common-security</artifactId>
+            <version>${oj-common-security.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
