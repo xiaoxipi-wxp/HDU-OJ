@@ -19,13 +19,13 @@ public class GlobalExceptionHandler {
 
     //请求⽅式不⽀持
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
-    public Result<?> handler(RuntimeException e){
+    public Result<?> handler(HttpRequestMethodNotSupportedException e){
         return Result.failed(e.getMessage(), ResultCode.FAILED);
     }
 
     //运⾏时异常
     @ExceptionHandler(RuntimeException.class)
-    public Result<?> handler(NullPointerException e){
+    public Result<?> handler(RuntimeException e){
         return  Result.error();
     }
 

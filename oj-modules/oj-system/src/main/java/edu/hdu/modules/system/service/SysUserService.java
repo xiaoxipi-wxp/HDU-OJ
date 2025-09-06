@@ -14,9 +14,7 @@ import org.springframework.stereotype.Service;
 public class SysUserService {
     @Autowired
     private SysUserMapper sysUserMapper;
-
     public Result<Void> login(String userAccount, String password) {
-
         QueryWrapper<SysUser> queryWrapper = new QueryWrapper<SysUser>();
         queryWrapper.lambda()
                 .select(SysUser::getPassword)
