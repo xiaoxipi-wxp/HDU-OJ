@@ -34,6 +34,8 @@
         <oj-commom-core.version>1.0-SNAPSHOT</oj-commom-core.version>
         <oj-common-swagger.version>1.0-SNAPSHOT</oj-common-swagger.version>
         <oj-common-security.version>1.0-SNAPSHOT</oj-common-security.version>
+        <oj-common-redis.version>1.0-SNAPSHOT</oj-common-redis.version>
+        <oj-commom-mybatis.version>1.0-SNAPSHOT</oj-commom-mybatis.version>
     </properties>
 
     <dependencies>

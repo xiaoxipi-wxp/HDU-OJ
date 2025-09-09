@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,7 +14,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
-@Component
+@Service
 public class RedisService {
     @Autowired
     public RedisTemplate redisTemplate;
@@ -45,10 +46,20 @@ public class RedisService {
      * @param unit 时间单位
      * @return true=设置成功；false=设置失败
      */
-    public boolean expire(final String key, final long timeout, final TimeUnit
-            unit) {
+    public boolean expire(final String key, final long timeout, final TimeUnit unit) {
         return redisTemplate.expire(key, timeout, unit);
     }
+    /**
+     * 设置有效时间
+     *
+     * @param key Redis键
+     * @param unit 时间单位
+     * @return 剩余有效时间
+     */
+    public long getExpire(final String key, final TimeUnit unit) {
+        return redisTemplate.getExpire(key, unit);
+    }
+
     /**
      * 删除单个对象
      *
@@ -75,8 +86,7 @@ public class RedisService {
      * @param timeout 时间
      * @param timeUnit 时间颗粒度
      */
-    public <T> void setCacheObject(final String key, final T value, final Long
-            timeout, final TimeUnit timeUnit) {
+    public <T> void setCacheObject(final String key, final T value, final Long timeout, final TimeUnit timeUnit) {
         redisTemplate.opsForValue().set(key, value, timeout, timeUnit);
     }
     /**

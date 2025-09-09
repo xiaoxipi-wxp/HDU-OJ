@@ -38,6 +38,16 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+        <dependency>
+            <groupId>edu.hdu</groupId>
+            <artifactId>oj-common-redis</artifactId>
+            <version>${oj-common-redis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.hdu</groupId>
+            <artifactId>oj-common-core</artifactId>
+            <version>${oj-commom-core.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

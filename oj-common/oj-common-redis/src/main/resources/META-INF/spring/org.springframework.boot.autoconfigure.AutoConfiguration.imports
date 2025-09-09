@@ -1,2 +1,2 @@
-com.bite.common.redis.service.RedisService
-com.bite.common.redis.config.RedisConfig
+edu.hdu.common.redis.service.RedisService
+edu.hdu.common.redis.config.RedisConfig

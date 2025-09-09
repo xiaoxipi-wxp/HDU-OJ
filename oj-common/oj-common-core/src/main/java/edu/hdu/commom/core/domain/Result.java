@@ -10,6 +10,10 @@ public class Result<T> {
     private int code;
     private String msg;
 
+
+
+
+
     public static <T> Result<T> success() {
         return assembleResult(null, ResultCode.SUCCESS);
     }
@@ -30,8 +34,20 @@ public class Result<T> {
         return assembleResult(data,resultCode);
     }
 
-    public static <T> Result<T> assembleResult(T data, ResultCode resultCode) {
-        Result<T> result = new Result<T>();
+    public static <T> Result<T> failed(int code, String msg) {
+        return assembleResult(code, msg, null);
+    }
+
+    private static <T> Result<T> assembleResult(int code, String msg, T data) {
+        Result<T> r = new Result<>();
+        r.setCode(code);
+        r.setData(data);
+        r.setMsg(msg);
+        return r;
+    }
+
+    private static <T> Result<T> assembleResult(T data, ResultCode resultCode) {
+        Result<T> result = new Result<>();
         result.setData(data);
         result.setCode(resultCode.getCode());
         result.setMsg(resultCode.getMsg());

@@ -10,3 +10,4 @@ import org.apache.ibatis.annotations.Select;
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
 }
+

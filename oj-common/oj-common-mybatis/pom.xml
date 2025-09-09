@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>oj-common-security</artifactId>
+    <artifactId>oj-common-mybatis</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,19 +19,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>edu.hdu</groupId>
-            <artifactId>oj-common-core</artifactId>
-            <version>${oj-commom-core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>edu.hdu</groupId>
-            <artifactId>oj-common-redis</artifactId>
-            <version>${oj-common-redis.version}</version>
-            <scope>compile</scope>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
         </dependency>
     </dependencies>
 
